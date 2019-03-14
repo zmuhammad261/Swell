@@ -1,0 +1,121 @@
+/*------------- COMPONENTS --------------*/
+
+.btn {
+	border: none;
+	&:hover {
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	}
+}
+
+.btn-with-color {
+	&:hover {
+		color: $site-accent;
+	}
+}
+
+.btn-wrap {
+	.btn {
+		border-radius: 50px;
+		padding: 0.5rem 2rem;
+		background: #fff;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+		color: #202020;
+
+		&.btn-with-icon {
+			position: relative;
+			overflow: hidden;
+
+			span {
+				@include transition($transition-base);
+				display: inline-block;
+			}
+
+			.show {
+				transform: translateX(0);
+				@include transition($transition-base);
+			}
+
+		.hidden {
+		    transform: translateX(-500px);
+		    position: absolute;
+		    @include transition($transition-base);
+		}
+
+		&:hover {
+			.show {
+				
+			    transform: translateX(500px);
+			    position: absolute;
+			    @include transition($transition-base);
+			}
+
+			.hidden {
+				@include transition($transition-base);
+				transform: translateX(0);
+				position: relative;
+			}
+		}
+	}
+	}
+}
+
+
+/*------------- FORM --------------*/
+
+.swell-form {
+	.form-control {
+		border-radius: 2px;
+		border: 0;
+		font-size: 0.85rem;
+	}
+	.input-group-append {
+		.btn {
+			border-radius: 2px;
+		}
+	}
+}
+
+/*------------- TESTIMONIAL --------------*/
+
+.swell-testimonial {
+	.testimonials-list-container {
+		.testimonials-list {
+			font-size: 1rem;
+			.testimonial-author {
+				.testimonial-author-img {
+					width: 65px;
+					border-radius: 50%;
+					margin: auto;
+					margin-bottom: 1.25rem;
+				}
+				span {
+					font-weight: 600;
+					text-transform: uppercase;
+					font-size: 0.9rem;
+				}
+			}
+			.testimonial-content {
+				
+			}
+		}
+	}
+}
+
+.slick-slider {
+	overflow: hidden;
+
+	.slick-arrow {
+		&.slick-prev {
+			left: 25px;
+		}
+		&.slick-next {
+			right: 25px;
+		}
+		&:before {
+			color: #000;
+		}
+	}
+}
+

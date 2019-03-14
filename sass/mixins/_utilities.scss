@@ -1,0 +1,20 @@
+@mixin block() {
+    @media only screen and (min-width: 767.98px) {
+        padding: 75px 0;
+    }
+        padding: 50px 0;
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

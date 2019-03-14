@@ -1,0 +1,66 @@
+/*------------- RESPONSIVENESS --------------*/
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {
+    .swell-large-font {
+        font-size: 5rem;
+    }
+
+    .swell-title-wrap {
+        .swell-title.swell-main-title {
+            font-size: map-get($swell-header-h2, md);
+        }
+    }
+
+    .swell-banner {
+        min-height: 100vh;
+        background: #F0F0F0;
+
+        .inner-wrap {
+
+            .info-wrap {
+                .banner-title {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .special-section {
+    	.sale-section {
+    		.display-img {
+    			margin-top: -75px;
+    		}
+    	}
+    }
+
+}
+
+@include media-breakpoint-up(lg) {
+    .swell-title-wrap {
+        .swell-title.swell-main-title {
+            font-size: map-get($swell-header-h2, lg);
+        }
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    .sale-section-small {
+        .swell-large-font {
+            font-size: 4rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .swell-title-wrap {
+        .swell-title.swell-main-title {
+            font-size: map-get($swell-header-h2, xl);
+        }
+    }
+}
