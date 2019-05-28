@@ -28,7 +28,7 @@
     color: #fff;
 	}
 
-	.cart-check {
+	.cart-link {
 	     position: absolute;
 	    top: -20px;
 	    left: -20px;
@@ -42,13 +42,9 @@
     -moz-transform-origin: bottom;
     -ms-transform-origin: bottom;
     transform-origin: bottom;
-    @include transition($transition-base);
-    
-
-    .cart-link {
-    	color: #fff !important;
+    color: #fff !important;
     	text-decoration: none;
-    }
+    
 	}
 
 	.img-wrap {
@@ -102,7 +98,7 @@
 }
 
 &:hover {
-	.cart-check {
+	.cart-link {
 	    -webkit-transform: translate(0px) rotate(-45deg);
     -ms-transform: translate(0px) rotate(-45deg);
     -o-transform: translate(0px) rotate(-45deg);
@@ -114,15 +110,32 @@
 
 .swell-product-title {
 		margin: 0;
+
+		a {
+			color: $site-text-color;
+			text-decoration: none;
+
+			&:hover,&:focus {
+				color: $site-accent;
+			}
+		}
 	}
 
 .swell-product-subtitle {
 	@extend .text_gray;
 	font-size: 1rem;
+	a {
+		color: $site-text-color;
+		text-decoration: none;
+
+		&:hover,&:focus {
+				color: $site-accent;
+			}
+	}
 }
 
 .products-pricing {
-	font-family: $font-lato;
+	// font-family: $font-tertiary;
 	.swell-product-caption {
 		margin: 0;
 		font-size: 1rem;
@@ -140,6 +153,14 @@
 		padding-left: 1rem;
 		text-decoration: line-through;
 	}
+}
+.product-album {
+	a {
+		outline: none;
+	}
+}
+.product-block-album {
+	padding-bottom: 1rem;
 }
 
 .products-grid-on-display {

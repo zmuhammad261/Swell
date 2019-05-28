@@ -1,5 +1,6 @@
-$site-accent: #1797E7 !important;
+$site-accent: #008AFA !important;
 $light-bg: #F5F5F5 !important;
+$site-text-color: #212529;
 $footer-color: #868686;
 // Title Colors
 $swell-title-autumn: #FF9847 !important;
@@ -10,9 +11,9 @@ $swell-title-royal: #5F3ABE !important;
 $swell-title-ocean: #232291 !important;
 $swell-title-cloudy: #536A69 !important;
 
-$font-dosis: 'Dosis', 'Lato',  sans-serif;
-$font-lato: 'Lato', 'Dosis', sans-serif;
-$font-oswald: 'Oswald', 'Dosis', sans-serif;
+$font-primary: 'Roboto','Lato', sans-serif;
+$font-secondary: 'Oswald', sans-serif;
+$font-tertiary: 'Montserrat', 'Lato','Roboto', sans-serif;
 
 $grid-breakpoints: (
   xs: 0,

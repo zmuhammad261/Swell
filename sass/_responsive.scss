@@ -14,14 +14,29 @@
     }
 
     .swell-banner {
-        min-height: 100vh;
         background: #F0F0F0;
 
         .inner-wrap {
 
+            .content-wrap {
+                &.content-wrap-left {
+                    @include linear-gradient(to left, #008AFA, #0076E1);
+                    .info-wrap {
+                        right: -15%;
+                    }
+                }
+
+                &.content-wrap-right {
+                    @include linear-gradient(to right, #008AFA, #0076E1);
+                    .info-wrap {
+                        left: -15%;
+                    }
+                }
+            }
+
             .info-wrap {
                 .banner-title {
-                    font-size: 3rem;
+                    font-size: 3.5rem;
                 }
 
                 p {

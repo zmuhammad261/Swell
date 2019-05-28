@@ -7,8 +7,9 @@ lg: 2.5rem,
 xl: 2.75rem) !default;
 
 .swell-title {
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
+    font-family: $font-secondary;
 
     &.highlighted-bg-txt {
         writing-mode: vertical-rl;
@@ -38,32 +39,35 @@ xl: 2.75rem) !default;
         position: relative;
         display: inline-block;
         padding: 0 1rem;
+        z-index: 10;
         @include transition($transition-base);
 
         &.swell-title-style {
             &:before {
                 content: "";
                 position: absolute;
-                height: 3px;
+                height: 10px;
                 background: $site-accent;
-                left: 50%;
-                top: -2px;
-                width: 50%;
+                left: 10%;
+                bottom: 8px;
+                width: 10px;
                 transform: translate(-50%);
                 border-radius: 50px;
+                z-index: -1;
                 @include transition($transition-base);
             }
 
             &:after {
                 content: "";
                 position: absolute;
-                height: 3px;
+                height: 10px;
                 background: $site-accent;
                 left: 50%;
-                bottom: -4px;
-                width: 50%;
+                bottom: 8px;
+                width: 75%;
                 transform: translate(-50%);
                 border-radius: 50px;
+                z-index: -1;
                 @include transition($transition-base);
             }
 
@@ -77,7 +81,7 @@ xl: 2.75rem) !default;
                         height: 100%;
                         left: 0;
                         top: 0;
-                        width: 3px;
+                        width: 10px;
                         transform: unset;
                         @include transition($transition-base);
                     }
@@ -86,7 +90,7 @@ xl: 2.75rem) !default;
                         height: 100%;
                         left: 100%;
                         bottom: 0;
-                        width: 3px;
+                        width: 10px;
                         transform: unset;
                         @include transition($transition-base);
                     }
@@ -132,7 +136,7 @@ xl: 2.75rem) !default;
 }
 
 .subtitle {
-    font-family: $font-lato;
+    font-family: $font-secondary;
     font-size: 18px;
     font-weight: 700;
 }

@@ -165,3 +165,7 @@ text_gray: #536A69
 .light-bg {
 	background: $light-bg;
 }
+
+a {
+	@include transition($transition-base);
+}

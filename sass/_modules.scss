@@ -62,12 +62,14 @@
         border-radius: 10px;
         background: #fff;
         margin: 0 15px;
-        font-family: $font-lato;
+        font-family: $font-secondary;
         box-shadow: 0.5px 1px 2rem rgba(0, 0, 0, 0.3);
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
 
         .count-amount {
             font-size: 2rem;
-            padding-top: 0.5rem;
             font-weight: 700;
         }
 
@@ -81,7 +83,7 @@
 }
 
 .whats-more-section {
-	background: $light-bg;
+    background: $light-bg;
 }
 
 /*------------- FOOTER --------------*/
@@ -89,11 +91,13 @@
 .swell-footer {
     font-size: 15px;
     color: $footer-color;
+
     .swell-title {
         position: relative;
         padding-bottom: 0.5rem;
         margin-bottom: 2rem;
         color: #202020;
+
         &:before {
             content: "";
             position: absolute;
@@ -106,44 +110,52 @@
         }
     }
 
-    ul{
+    ul {
         list-style: none;
         padding: 0;
         margin: 0;
 
         li {
-            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
             @include transition($transition-base);
+
             .icon {
                 padding-right: 0.5rem;
                 vertical-align: middle;
+
                 &:before {
                     font-weight: bold !important;
                 }
             }
-            a {
-                position: relative;
-                color: $footer-color;
-                text-decoration: none;
-                overflow: hidden;
-                display: block;
+        }
+    }
+
+    .footer-links-wrap {
+        .footer-link {
+            position: relative;
+            color: $site-accent;
+            text-decoration: none;
+            overflow: hidden;
+            display: inline-block;
+            @include transition($transition-base);
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -500px;
+                bottom: 0;
+                width: 100%;
+                height: 3px;
+                border-radius: 10px;
+                background: $site-accent;
                 @include transition($transition-base);
+            }
+
+            &:hover {
 
                 &:before {
-                    position: absolute;
-                    left: -150px;
-                    top: 2px;
+                    left: 0;
                     @include transition($transition-base);
-                }
-
-                &:hover {
-                    color: $site-accent;
-                    padding-left: 1rem;
-
-                    &:before {
-                        left: 0;
-                        @include transition($transition-base);
-                    }
                 }
             }
         }
